@@ -2,7 +2,7 @@
 
 Foghorn is a flexible and reliable cloud notification service that can be utilized by both internal services (e.g. monitoring, autoscaling) as well as end-users. Foghorn makes it simple to transmit messages to both human recipients and distributed services.
 
-Foghorn is a cloud service ([reminiscent of SNS](http://aws.amazon.com/documentation/sns/)) facilitating the definition of topics through which messages can be published and consumed in [pub/sub fashion](http://en.wikipedia.org/wiki/Publish–subscribe_pattern) by authorised users.
+Foghorn is a cloud service ([reminiscent of SNS](http://aws.amazon.com/sns/)) facilitating the definition of topics through which messages can be published and consumed in [pub/sub fashion](http://en.wikipedia.org/wiki/Publish–subscribe_pattern) by authorised users.
 
 When subscribing to a topic of interest Foghorn users will specify a protocol (email, http, sms, etc.) through which they wish to consume the posted messages.
 
