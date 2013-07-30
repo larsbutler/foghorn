@@ -12,6 +12,8 @@ A message can be customised to have different payloads for each supported protoc
 
 Last but not least users will be able to list the subscriptions for a given topic or all of them.
 
+The aim is to develop this project together with the OpenStack community and eventually make it an integral part of OpenStack.
+
 ## API actions
 
  - add permission
