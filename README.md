@@ -41,10 +41,16 @@ The aim is to develop this project together with the OpenStack community and eve
 
 ## How is Foghorn different from Marconi?
 
-Marconi is a general purpose messaging service to be used for building distributed systems. Foghorn - on the other hand - is a notification service that's more geared towards the (human) end-user and whose value lies in the
+Marconi is a general purpose messaging service meant to be used for building distributed systems. Foghorn - on the other hand - is a notification service that's more geared towards the (human) end-user and whose value lies in the
 
  - integration with other cloud services (which serve as event sources)
  - variety of protocols available to topic subscribers (ideally via pluggable protocol providers)
  - solid support for security roles/rules
 
 According to [Marconi's wiki](https://wiki.openstack.org/wiki/Marconi#Out_of_Scope) it will not support subscriber protocols like email and SMS. The two systems are thus complementary to each other.
+
+## Will Foghorn be built on top of Marconi?
+
+Possibly. Having said that, Foghorn's messaging needs are extremely _simple_ and it's meant to be a foundational service. We'd thus rather avoid dependencies on other services if at all possible.
+We are currently thinking of using a [pub-sub](https://en.wikipedia.org/wiki/Publish/subscribe) abstraction module with pluggable backends. One such backend could be Marconi. This would allow for Foghorn deployments that make use of Marconi.
+But Foghorn will also have its own _default_ pub-sub backend making stand-alone deployments a possibility.
