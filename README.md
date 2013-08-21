@@ -36,3 +36,15 @@ The aim is to develop this project together with the OpenStack community and eve
 
  - users will need to confirm a subscription before it takes effect
  - Foghorn will *not* support durable topics i.e. it won't hold messages until consumers subscribe
+
+# FAQ
+
+## How is Foghorn different from Marconi?
+
+Marconi is a general purpose messaging service to be used for building distributed systems. Foghorn - on the other hand - is a notification service that's more geared towards the (human) end-user and whose value lies in the
+
+ - integration with other cloud services (which serve as event sources)
+ - variety of protocols available to topic subscribers (ideally via pluggable protocol providers)
+ - solid support for security roles/rules
+
+According to [Marconi's wiki](https://wiki.openstack.org/wiki/Marconi#Out_of_Scope) it will not support subscriber protocols like email and SMS. The two systems are thus complementary to each other.
